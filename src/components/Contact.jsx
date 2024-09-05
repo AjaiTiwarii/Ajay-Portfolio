@@ -12,7 +12,8 @@ const Contact = () => {
                   initial={{ opacity: 0, y: -100 }}
                   transition={{ duration: 0.5 }}
 
-                  className="my-10 text-center text-4xl">Get in touch</motion.h2>
+                  className="my-10 text-center text-4xl">Get 
+                  <span className="text-neutral-500"> in touch</span></motion.h2>
 
               <div className="text-center tracking-tighter">
                   <motion.p

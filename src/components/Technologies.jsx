@@ -81,7 +81,7 @@ const Technologies = () => {
                         animate="animate"
                         className="rounded-2xl border-4 border-neutral-800 p-4"
                     >
-                        <FaJava className="text-7xl text-red-600" />
+                        <FaJava className="text-7xl text-orange-400" />
                     </motion.div>
 
                     <motion.div
