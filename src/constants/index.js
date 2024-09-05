@@ -47,7 +47,7 @@ export const PROJECTS = [
     github: "https://github.com/AjaiTiwarii/AmazoScrape" // Replace with actual GitHub link
   },
   {
-    title: "DNSServer Implementation in Go",
+    title: "DNS Server Implementation in Go",
     image: dns_img, // Update with the appropriate image
     description: "Implemented DNS query parsing and response generation, including handling various DNS record types and DNS message compression. Built with Go’s net package for handling UDP connections.",
     technologies: ["Go (Golang)", "Networking (UDP)", "DNS Protocol"],
