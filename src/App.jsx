@@ -9,6 +9,8 @@ import Contact from "./components/Contact"
 import Education from "./components/Education";
 import Footer from "./components/Footer";
 
+import { Analytics } from "@vercel/analytics/react"
+
 const App = () => {
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
@@ -18,6 +20,7 @@ const App = () => {
       
 
       <div className="container mx-auto px-8">
+        <Analytics />
         <Navbar />
         <Hero />
         <About />
