@@ -1,256 +1,139 @@
+import { motion } from "framer-motion"
 
-import { RiReactjsLine } from "react-icons/ri";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
-import { IoLogoNodejs } from "react-icons/io";
-import { SiMysql } from "react-icons/si";
-import { DiRedis } from "react-icons/di";
-import { TbBrandCpp } from "react-icons/tb";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaBootstrap } from "react-icons/fa";
-import { FaGolang } from "react-icons/fa6";
-import { FaJava } from "react-icons/fa";
-import { SiDart } from "react-icons/si";
-import { SiPowershell } from "react-icons/si";
-import { MdOutlineTerminal } from "react-icons/md";
-import { FaPython } from "react-icons/fa";
-import { SiDjango } from "react-icons/si";
-import { SiFlask } from "react-icons/si";
-import { RiFlutterFill } from "react-icons/ri";
-import { FaGitAlt } from "react-icons/fa";
-import { SiFramer } from "react-icons/si";
-import { SiLatex } from "react-icons/si";
-import { motion } from "framer-motion";
-import { SiVercel } from "react-icons/si";
+// Frontend
+import { RiReactjsLine, RiTailwindCssFill, RiFlutterFill } from "react-icons/ri"
+import { TbBrandNextjs } from "react-icons/tb"
+import { FaBootstrap } from "react-icons/fa"
 
+// Backend
+import { IoLogoNodejs } from "react-icons/io"
+import { SiDjango, SiFlask, SiExpress, SiSpringboot, SiFastapi } from "react-icons/si"
+
+// Databases / Infra
+import { SiMongodb, SiMysql, SiPostgresql, SiSnowflake } from "react-icons/si"
+import { DiRedis } from "react-icons/di"
+import { SiDocker } from "react-icons/si"
+
+// Languages
+import { TbBrandCpp } from "react-icons/tb"
+import { FaPython, FaJava } from "react-icons/fa"
+import { FaGolang } from "react-icons/fa6"
+import { SiDart } from "react-icons/si"
+
+// Tools / Others
+import { FaGitAlt } from "react-icons/fa"
+import { SiFramer, SiLatex, SiPowershell, SiVercel, SiOpencv } from "react-icons/si"
+import { MdOutlineTerminal } from "react-icons/md"
 
 const iconVariants = (duration) => ({
-    initial: { y: -10 },
-    animate: {
-        y: [10, -10],
-        transition: {
-            duration: duration,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "reverse",
-        },
+  initial: { y: -10 },
+  animate: {
+    y: [10, -10],
+    transition: {
+      duration: duration,
+      ease: "linear",
+      repeat: Infinity,
+      repeatType: "reverse",
     },
-});
+  },
+})
+
+const TechCard = ({ children }) => (
+  <motion.div
+    variants={iconVariants(3)}
+    initial="initial"
+    animate="animate"
+    className="rounded-2xl border border-neutral-800 p-4 hover:border-neutral-600 transition"
+  >
+    {children}
+  </motion.div>
+)
 
 const Technologies = () => {
-    return (
-        <section id="skills" className="py-20">
-            <div className="border-b border-neutral-800 pb-24">
-                <motion.h1
-                    whileInView={{ opacity: 1, y: 0 }}
-                    initial={{ opacity: 0, y: -100 }}
-                    transition={{ duration: 1.5 }}
-                    className="my-20 text-center text-4xl"
-                >
-                    Technologies
-                </motion.h1>
-                <motion.div
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1.5 }}
-                    className="flex flex-wrap items-center justify-center gap-4"
-                >
-                    {/* Existing Icons */}
+  return (
+    <section id="skills" className="py-24">
+      <div className="border-b border-neutral-900 pb-12">
 
-                    <motion.div
-                        variants={iconVariants(4.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <TbBrandCpp className="text-7xl text-blue-600" />
-                    </motion.div>
+        {/* HEADING */}
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -60 }}
+          transition={{ duration: 0.5 }}
+          className="text-center text-4xl lg:text-5xl font-light tracking-tight mb-16"
+        >
+          Skills & Technologies
+        </motion.h1>
 
-                    <motion.div
-                        variants={iconVariants(5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <FaGolang className="text-7xl text-blue-300" />
-                    </motion.div>
+        <div className="max-w-6xl mx-auto space-y-12">
 
-                    <motion.div
-                        variants={iconVariants(4)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <FaJava className="text-7xl text-orange-400" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(2.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <RiReactjsLine className="text-7xl text-cyan-400" />
-                    </motion.div>
-
-
-                    <motion.div
-                        variants={iconVariants(5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <SiMongodb className="text-7xl text-green-700" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(4)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <DiRedis className="text-7xl text-red-700" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(2.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <IoLogoNodejs className="text-7xl text-green-500" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(3)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <SiMysql className="text-7xl text-blue-500" />
-                    </motion.div>
-                    
-
-                    <motion.div
-                        variants={iconVariants(3.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <RiTailwindCssFill className="text-7xl text-blue-400" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(2.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <FaBootstrap className="text-7xl text-purple-500" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(3.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <SiDart className="text-7xl text-blue-400" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(2)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <SiPowershell className="text-7xl text-blue-700" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(5.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <MdOutlineTerminal className="text-7xl text-gray-400" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(4.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <FaPython className="text-7xl text-yellow-400" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(3.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <SiDjango className="text-7xl text-green-600" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(2.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <SiFlask className="text-7xl text-gray-600" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <RiFlutterFill className="text-7xl text-blue-400" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(4)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <FaGitAlt className="text-7xl text-orange-600" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(3.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <SiFramer className="text-7xl text-blue-500" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(2.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <SiLatex className="text-7xl text-green-700" />
-                    </motion.div>
-
-                    <motion.div
-                        variants={iconVariants(2.5)}
-                        initial="initial"
-                        animate="animate"
-                        className="rounded-2xl border-4 border-neutral-800 p-4"
-                    >
-                        <SiVercel className="text-7xl text-white-700" />
-                    </motion.div>
-                </motion.div>
+          {/* LANGUAGES */}
+          <div>
+            <h3 className="text-sm text-neutral-500 mb-4">Languages</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              <TechCard><TbBrandCpp className="text-6xl text-blue-600" /></TechCard>
+              <TechCard><FaPython className="text-6xl text-yellow-400" /></TechCard>
+              <TechCard><FaJava className="text-6xl text-orange-400" /></TechCard>
+              <TechCard><FaGolang className="text-6xl text-blue-300" /></TechCard>
+              <TechCard><SiDart className="text-6xl text-blue-400" /></TechCard>
             </div>
-        </section>
-    );
-};
+          </div>
 
-export default Technologies;
+          {/* FRONTEND */}
+          <div>
+            <h3 className="text-sm text-neutral-500 mb-4">Frontend</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              <TechCard><RiReactjsLine className="text-6xl text-cyan-400" /></TechCard>
+              <TechCard><TbBrandNextjs className="text-6xl text-white" /></TechCard>
+              <TechCard><RiTailwindCssFill className="text-6xl text-blue-400" /></TechCard>
+              <TechCard><FaBootstrap className="text-6xl text-purple-500" /></TechCard>
+              <TechCard><RiFlutterFill className="text-6xl text-blue-400" /></TechCard>
+            </div>
+          </div>
+
+          {/* BACKEND */}
+          <div>
+            <h3 className="text-sm text-neutral-500 mb-4">Backend & Systems</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              <TechCard><IoLogoNodejs className="text-6xl text-green-500" /></TechCard>
+              <TechCard><SiExpress className="text-6xl text-gray-400" /></TechCard>
+              <TechCard><SiDjango className="text-6xl text-green-600" /></TechCard>
+              <TechCard><SiFlask className="text-6xl text-gray-500" /></TechCard>
+              <TechCard><SiSpringboot className="text-6xl text-green-500" /></TechCard>
+              <TechCard><SiFastapi className="text-6xl text-green-400" /></TechCard>
+            </div>
+          </div>
+
+          {/* DATABASES & INFRA */}
+          <div>
+            <h3 className="text-sm text-neutral-500 mb-4">Databases & Infrastructure</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              <TechCard><SiPostgresql className="text-6xl text-blue-400" /></TechCard>
+              <TechCard><SiMysql className="text-6xl text-blue-500" /></TechCard>
+              <TechCard><SiMongodb className="text-6xl text-green-700" /></TechCard>
+              <TechCard><DiRedis className="text-6xl text-red-600" /></TechCard>
+              <TechCard><SiDocker className="text-6xl text-blue-500" /></TechCard>
+              <TechCard><SiSnowflake className="text-6xl text-blue-300" /></TechCard>
+            </div>
+          </div>
+
+          {/* TOOLS */}
+          <div>
+            <h3 className="text-sm text-neutral-500 mb-4">Tools & Others</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              <TechCard><FaGitAlt className="text-6xl text-orange-600" /></TechCard>
+              <TechCard><SiFramer className="text-6xl text-blue-500" /></TechCard>
+              <TechCard><SiLatex className="text-6xl text-green-700" /></TechCard>
+              <TechCard><SiPowershell className="text-6xl text-blue-700" /></TechCard>
+              <TechCard><MdOutlineTerminal className="text-6xl text-gray-400" /></TechCard>
+              <TechCard><SiVercel className="text-6xl text-white" /></TechCard>
+              <TechCard><SiOpencv className="text-6xl text-red-400" /></TechCard>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Technologies

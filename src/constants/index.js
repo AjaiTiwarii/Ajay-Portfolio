@@ -3,75 +3,123 @@ import dns_img from "../assets/projects/dns-img.jpg";
 import ra_img from "../assets/projects/ra-img.jpg";
 import wa_img from "../assets/projects/wa-img.jpg";
 
-export const HERO_CONTENT = `I am an aspiring software developer with a passion for solving complex problems and creating impactful solutions. With a solid foundation in languages like C++, Python, and Go, I have developed projects ranging from web applications to networking tools. My experience includes working with frameworks like Django and React, and databases like MongoDB and MySQL. I am driven by a desire to learn and continuously improve, with the goal of leveraging my skills to build innovative software that makes a difference.`;
+export const HERO_CONTENT = `I am a Full Stack Software Engineer with strong expertise in backend systems, scalable architectures, and AI-powered applications. Currently working as a Software Engineer Intern at HashedIn by Deloitte, I have built production-grade systems and led winning product development teams. I specialize in designing robust backend services, asynchronous systems, and integrating GenAI to build intelligent applications. With a strong foundation in Data Structures & Algorithms (LeetCode Top 8%), I am passionate about solving complex engineering problems and building impactful products.`;
 
-export const ABOUT_TEXT = `I am Ajay Tiwari, a passionate and driven Computer Science Engineering student at IIIT Kalyani, with a CGPA of 8.93. I have a strong foundation in programming and problem-solving, excelling in languages such as C++, Python, Go, and JavaScript. My experience spans across various domains, from web development to systems programming, where I’ve worked on projects like a DNS Server implementation in Go and an Amazon web scraper using Django and Redis. I am deeply committed to continuous learning and have actively participated in coding contests, securing top ranks on platforms like CodeChef and LeetCode. With a keen interest in developing innovative solutions, I aspire to contribute to impactful projects that combine technology with creativity. Outside of academics, I enjoy participating in hackathons and exploring new technologies.`;
+export const ABOUT_TEXT = `I am Ajay Tiwari, a Computer Science Engineering student at IIIT Kalyani with a CGPA of 8.91. I am a backend-focused full stack developer with experience building scalable systems, distributed architectures, and AI-powered applications.
+
+During my internship at HashedIn by Deloitte, I led a 5-member team to build a production-grade product module that won 1st place in a company-wide competition. My work spans across backend systems, asynchronous processing (Celery, Redis), containerized environments (Docker), and modern full-stack frameworks.
+
+I have built projects ranging from a LeetCode-style coding platform with secure code execution to an AI-powered CRM that generates campaign insights using LLMs. I also have experience in machine learning through a rooftop solar analysis project using YOLO.
+
+I actively solve algorithmic problems (800+ on LeetCode, Top 8%) and enjoy building systems that are scalable, efficient, and impactful.`;
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "Jan 2026 - Present",
+    role: "Software Engineer Intern",
+    company: "HashedIn by Deloitte",
+    description: [
+      "Completed a structured 5-track program covering Full Stack, GenAI, and Data Engineering",
+      "Led a 5-member cross-functional team during Product Month",
+      "Built IPS Token Exchange module integrated into a live enterprise project",
+      "Secured 1st place among all teams in company-wide competition"
+    ],
+    technologies: [
+      "Python",
+      "GenAI",
+      "Java",
+      "Spring Boot",
+      "React",
+      "Node.js",
+      "PySpark",
+      "Snowflake"
+    ],
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "June 2025",
+    role: "Technical Solutions Engineer Intern",
+    company: "AlgoUniversity",
+    description: [
+      "Built automated web scraping system extracting 500+ coding questions from multiple platforms",
+      "Improved API response time from ~800ms to ~320ms by parallelizing external API calls using subprocess architecture",
+      "Used Django Debug Toolbar to measure and optimize backend performance",
+      "Worked on backend systems serving 2000+ active users"
+    ],
+    technologies: [
+      "Django REST Framework",
+      "React",
+      "PostgreSQL",
+      "BeautifulSoup",
+      "Selenium",
+      "APIs",
+      "Performance Optimization"
+    ],
   },
 ];
 
 export const PROJECTS = [
   {
+    title: "Mini CRM - AI Powered Customer Management Platform",
+    image: am_sc,
+    description: "Built a full-stack CRM platform with Google OAuth authentication, customer segmentation, and campaign tracking. Integrated Google Gemini API to generate AI-powered campaign insights within 3–5 seconds, replacing manual analysis workflows.",
+    technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Sequelize", "Tailwind CSS", "Google Gemini API"],
+    github: "https://github.com/AjaiTiwarii/Mini-CRM-Frontend",
+    deployed_link: "https://mini-crm-frontend-liard.vercel.app/"
+  },
+  {
+    title: "CodeMaster - Coding Platform",
+    image: dns_img,
+    description: "Developed a LeetCode-style coding platform supporting multi-language execution using Docker containers with strict resource limits. Designed an asynchronous execution system using Celery and Redis, handling concurrent submissions efficiently with 3–7 second processing time.",
+    technologies: ["Django REST Framework", "React", "PostgreSQL", "Redis", "Celery", "Docker", "JWT"],
+    github: "https://github.com/AjaiTiwarii/coding-platform",
+    deployed_link: ""
+  },
+  {
+    title: "GeoPV - Rooftop Solar Potential Analyzer",
+    image: ra_img,
+    description: "Worked on training a YOLO-based object detection model on 400+ annotated satellite images, achieving strong precision and recall for rooftop detection. Analyzed 500+ buildings for solar potential estimation.",
+    technologies: ["React", "Flask", "Redis", "YOLO", "OpenCV", "Python"],
+    github: "https://github.com/harshrox/GeoPV",
+    deployed_link: ""
+  },
+
+  // --- OLD PROJECTS (PRESERVED) ---
+  {
     title: "AmazoScrape Pro",
-    image: am_sc, // Update with the appropriate image
-    description: "Developed a robust web scraping project for efficiently extracting detailed information from Amazon product pages. Implemented Selenium, Bright Data’s rotating proxies, and Jupyter Notebook for enhanced data accuracy and analysis.",
-    technologies: ["Django", "Redis", "Celery", "Python", "Bright Data", "Jupyter Notebook", "Selenium"],
-    github: "https://github.com/AjaiTiwarii/AmazoScrape" // Replace with actual GitHub link
+    image: am_sc,
+    description: "Developed a robust web scraping project for efficiently extracting detailed information from Amazon product pages using Selenium and rotating proxies.",
+    technologies: ["Django", "Redis", "Celery", "Python", "Selenium"],
+    github: "https://github.com/AjaiTiwarii/AmazoScrape",
+    deployed_link: ""
   },
   {
     title: "DNS Server Implementation in Go",
-    image: dns_img, // Update with the appropriate image
-    description: "Implemented DNS query parsing and response generation, including handling various DNS record types and DNS message compression. Built with Go’s net package for handling UDP connections.",
-    technologies: ["Go (Golang)", "Networking (UDP)", "DNS Protocol"],
-    github: "https://github.com/AjaiTiwarii/codecrafters-dns-server-go/blob/master/app/dns/dns.go" // Replace with actual GitHub link
+    image: dns_img,
+    description: "Implemented DNS query parsing and response handling using Go's networking stack, supporting multiple DNS record types.",
+    technologies: ["Go", "Networking", "UDP", "DNS Protocol"],
+    github: "https://github.com/AjaiTiwarii/codecrafters-dns-server-go/blob/master/app/dns/dns.go",
+    deployed_link: ""
   },
   {
     title: "Recipe Book Application",
-    image: ra_img, // Update with the appropriate image
-    description: "Developed a web application to manage recipes, including advanced authentication and CRUD operations. Utilized Django views, URLs, and models for backend logic and Bootstrap CSS for a responsive frontend.",
-    technologies: ["Django", "Python", "SQLite", "HTML", "Bootstrap CSS"],
-    github: "https://github.com/AjaiTiwarii/Recipe_Project" // Replace with actual GitHub link
+    image: ra_img,
+    description: "Built a Django-based CRUD application with authentication and responsive UI for managing recipes.",
+    technologies: ["Django", "Python", "SQLite", "HTML", "Bootstrap"],
+    github: "https://github.com/AjaiTiwarii/Recipe_Project",
+    deployed_link: ""
   },
   {
     title: "Weather Application",
-    image: wa_img, // Update with the appropriate image
-    description: "Developed a mobile application for getting real-time weather updates. Used  OpenWeatherMap API and Implemented key features including city-based weather search.",
-    technologies: ["Flutter", "Dart", "Flutter Packages", "API"],
-    github: "https://github.com/AjaiTiwarii/Weather-App" // Replace with actual GitHub link
+    image: wa_img,
+    description: "Developed a mobile app to fetch real-time weather data using OpenWeatherMap API with city-based search.",
+    technologies: ["Flutter", "Dart", "API"],
+    github: "https://github.com/AjaiTiwarii/Weather-App",
+    deployed_link: ""
   }
 ];
 
-
 export const CONTACT = {
-  address: "Kalyani, Nadia, West Bengal",
+  address: "Bengaluru, India",
   phoneNo: "+91 9598898898",
-  email: "ajait0209@gmail.com",
+  email: "ajaiofficial0209@gmail.com",
 };
